@@ -13,7 +13,10 @@ const AboutComponent = () => {
 			<section className="about--inside__container-one">
 				<h2>Om mig</h2>
 				<h4>Sara Johnsson</h4>
-				<p>Jag är 37 år, jag bor i Norrtälje med min man och våra två barn.</p>
+				<p>
+					Jag är 37 år, jag bor i Norrtälje med min man Tomas och våra två barn
+					Walter och Saga.
+				</p>
 				<br />
 				<h4>Tidigare erfarenheter</h4>
 
