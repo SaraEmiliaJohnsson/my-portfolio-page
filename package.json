@@ -2,6 +2,7 @@
 	"name": "my-portfolio-page",
 	"private": true,
 	"version": "0.0.0",
+	"homepage": "https://saraemiliajohnsson.github.io/my-portfolio-page/",
 	"type": "module",
 	"scripts": {
 		"dev": "vite",
