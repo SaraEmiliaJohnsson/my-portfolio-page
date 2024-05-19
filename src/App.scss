@@ -41,7 +41,7 @@ body.dark-theme {
 .main--container {
 	background-color: var(--primary-background-color);
 	width: 100vw;
-	height: 100vh;
+	// height: 100vh;
 }
 
 .main--container.dark-theme {
@@ -65,7 +65,6 @@ a.dark-theme {
 // Hover styles for links in light and dark mode
 a:hover {
 	color: rgb(119, 34, 184);
-	font-size: larger;
 	-webkit-text-stroke: 0.2px white;
 }
 
