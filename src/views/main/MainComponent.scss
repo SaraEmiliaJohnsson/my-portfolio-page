@@ -12,7 +12,8 @@
 		flex-direction: row;
 		justify-content: center;
 		align-items: center;
-		margin-top: 160px;
+		margin-top: 120px;
+		margin-bottom: 120px;
 		// Respond to tablet and mobile view
 		@include respond-to(tablet) {
 			flex-direction: column;
@@ -49,6 +50,8 @@
 		.main--link__container {
 			display: flex;
 			flex-direction: row;
+			padding: 5px;
+			margin: 5px;
 			.main--link {
 				padding: 10px;
 			}
@@ -58,6 +61,7 @@
 			flex-direction: row;
 			justify-content: space-around;
 			align-items: center;
+			padding: 5px;
 
 			.html-logo {
 				height: 40px;
