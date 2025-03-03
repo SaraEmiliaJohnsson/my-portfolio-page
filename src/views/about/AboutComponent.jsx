@@ -1,5 +1,6 @@
 import React from "react";
 import "./AboutComponent.scss";
+import { motion } from "framer-motion";
 import PersonalityButton from "../../components/buttons/PersonalityButton";
 
 const AboutComponent = () => {
@@ -11,17 +12,41 @@ const AboutComponent = () => {
 				</article>
 			</section>
 			<section className="about--inside__container-one">
-				<h2>Om mig</h2>
-				<h4>Sara Johnsson</h4>
-				<p>
-					Jag är 37 år, jag bor i Norrtälje med min man Tomas och våra två barn
-					Walter och Saga.
-				</p>
+				<motion.section
+					className="about--inside__container-one"
+					initial={{ opacity: 0, x: -50 }}
+					animate={{ opacity: 1, x: 0 }}
+					transition={{ duration: 0.8 }}>
+
+					<h2>Om mig</h2>
+					<p>
+						Hej! Jag heter Sara och jag är en nyfiken och engagerad Frontend-utvecklare med en passion för
+						att skapa användarvänliga och interaktiva webbupplevelser. Jag bor i Norrtälje med min man och
+						våra två barn, Walter och Saga. När jag inte kodar älskar jag att lösa problem, lära mig nya teknologier och
+						experimentera med design och funktionalitet.
+					</p>
+
+					<p>
+						Efter många år inom en annan bransch bestämde jag mig för att följa min passion för webbutveckling.
+						Nu bygger jag moderna och responsiva webbsidor med React, TypeScript och SASS.
+					</p>
+
+					<h3>När jag inte kodar gillar jag att:</h3>
+					<ul>
+						<li>Utveckla kreativa projekt i React & TypeScript</li>
+						<li>Utforska UI/UX-design och användarvänlighet</li>
+						<li>Lära mig nya teknologier inom webbutveckling</li>
+						<li>Baka och pyssla med mina barn</li>
+					</ul>
+
+
+				</motion.section>
+
 				<br />
 				<h4>Tidigare erfarenheter</h4>
 
 				<p>
-					Under mina 14 år som brevbärare har jag utvecklat färdigheter och
+					Under mina många år som brevbärare har jag utvecklat färdigheter och
 					egenskaper som är avgörande för yrket. Att arbeta som brevbärare har
 					krävt en kombination av stresshantering, noggrannhet och hög kvalitet
 					i utförandet av arbetsuppgifterna. Den kontinuerliga hanteringen av
@@ -49,35 +74,36 @@ const AboutComponent = () => {
 			</section>
 
 			<section className="about--inside__container-three">
-				<h2>Ny väg i livet!</h2>
-				<h4>Utbildning på vägen till att bli Front End Utvecklare</h4>
-				<h4>Hermonds</h4>
-				<p>
-					På Hermonds började min resa för att där jag fokuserade på att studera
-					kurser som var relevanta för att komma in på
-					webbutvecklingsutbildningar.
-				</p>
-				<br />
-				<ul>
-					<li>Matematik 2B</li>
-					<li>Programmering 1</li>
-					<li>Webbutveckling 1</li>
-				</ul>
-				<br />
-				<h4>KYH Anywhere</h4>
-				<p>
-					Efter Hermods valde jag att fortsätta min utbildning genom att gå en
-					Frontend Developer-utbildning på KYH. En av anledningarna till detta
-					val var den spännande LIA (Lärande i Arbete) perioden, som erbjöd
-					möjligheten att tillämpa mina kunskaper i en verklig arbetsmiljö.
-					Dessutom var det praktiskt att utbildningen var baserad nära min
-					hemort, vilket underlättade det dagliga livet. <br /> <br /> De språk
-					och teknologier som jag framförallt fokuserade på och lärde mig mycket
-					om under KYH-utbildningen inkluderade HTML, CSS/SASS, JavaScript och
-					React/Vite. Denna inriktning på Frontend Development gav mig en djup
-					förståelse för de teknologier som är centrala för att skapa
-					interaktiva och användarvänliga webbsidor och applikationer.
-				</p>
+				<section className="timeline">
+					<div className="timeline-item">
+						<div className="timeline-content">
+							<h4>Hermods</h4>
+							<p>
+								På Hermods började min resa där jag studerade matematik, programmering och webbutveckling.
+							</p>
+							<ul>
+								<li>Matematik 2B</li>
+								<li>Programmering 1</li>
+								<li>Webbutveckling 1</li>
+							</ul>
+						</div>
+					</div>
+
+					<div className="timeline-item">
+						<div className="timeline-content">
+							<h4>KYH Anywhere</h4>
+							<p>
+								Studerade frontendutveckling med fokus på React, JavaScript och modern webbutveckling.
+							</p>
+							<ul>
+								<li>HTML, CSS, SASS</li>
+								<li>JavaScript & React</li>
+								<li>Vite & Redux</li>
+							</ul>
+						</div>
+					</div>
+				</section>
+
 			</section>
 		</div>
 	);

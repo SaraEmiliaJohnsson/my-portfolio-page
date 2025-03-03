@@ -5,8 +5,8 @@
 }
 
 .main--container {
-  background-color: rgb(49, 49, 139);
   height: 100vh;
+  width: 100vw;
 }
 
 a {

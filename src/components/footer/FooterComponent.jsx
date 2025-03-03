@@ -9,7 +9,6 @@ export default function FooterComponent() {
 	return (
 		<div>
 			<footer className="footer--container">
-				<ThemeToggle />
 				<section className="footer--link__container">
 					<a
 						href="https://github.com/saraemiliajohnsson"

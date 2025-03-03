@@ -1,6 +1,6 @@
 import "./MainComponent.scss";
 import { Link } from "react-router-dom";
-
+import { Link as ScrollLink } from "react-scroll";
 import html from "../../assets/html5.webp";
 import css from "../../assets/css.png";
 import javaScript from "../../assets/javascript.png";
@@ -8,6 +8,10 @@ import reactLogo from "../../assets/react.webp";
 import sass from "../../assets/sass.png";
 import vite from "../../assets/vite.png";
 import redux from "../../assets/Redux.webp";
+import typescriptLogo from "../../assets/typescript.svg";
+import AboutComponent from "../about/AboutComponent";
+import ProjectComponent from "../portfolio/ProjectComponent";
+import ContactComponent from "../contact/ContactComponent";
 
 export default function MainComponent() {
 	return (
@@ -18,13 +22,13 @@ export default function MainComponent() {
 					<h1>Sara Johnsson</h1>
 					<section className="main--link__container">
 						<section className="main--link">
-							<Link to="/about">Om mig</Link>
+							<Link to="/about">About</Link>
 						</section>
 						<section className="main--link">
-							<Link to="/portfolio">Projekt</Link>
+							<Link to="/portfolio">Project</Link>
 						</section>
 						<section className="main--link">
-							<Link to="/contact">Kontakt</Link>
+							<Link to="/contact">Contakt</Link>
 						</section>
 					</section>
 					<section className="programming-languages">
@@ -37,11 +41,7 @@ export default function MainComponent() {
 							<p className="language-name">CSS</p>
 						</div>
 						<div className="language">
-							<img
-								src={javaScript}
-								alt="JavaScript"
-								className="javascript-logo"
-							/>
+							<img src={javaScript} alt="JavaScript" className="javascript-logo" />
 							<p className="language-name">JavaScript</p>
 						</div>
 						<div className="language">
@@ -49,20 +49,28 @@ export default function MainComponent() {
 							<p className="language-name">React</p>
 						</div>
 						<div className="language">
-							<img src={sass} alt="Sass" className="sass-logo" />
-							<p className="language-name">SASS</p>
+							<img src={redux} alt="Redux" className="redux-logo" />
+							<p className="language-name">Redux</p>
 						</div>
 						<div className="language">
 							<img src={vite} alt="Vite" className="vite-logo" />
 							<p className="language-name">Vite</p>
 						</div>
 						<div className="language">
-							<img src={redux} alt="Redux" className="redux-logo" />
-							<p className="language-name">Redux</p>
+							<img src={sass} alt="SASS" className="sass-logo" />
+							<p className="language-name">SASS</p>
+						</div>
+						<div className="language">
+							<img src={typescriptLogo} alt="TypeScript" className="typescript-logo" />
+							<p className="language-name">TypeScript</p>
 						</div>
 					</section>
 				</section>
+
 			</section>
+			<AboutComponent />
+			<ProjectComponent />
+			<ContactComponent />
 		</div>
 	);
 }

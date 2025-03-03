@@ -3,7 +3,6 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import "./HeaderComponent.scss";
 import MobileMenu from "../hamburgermenu/MobileMenu";
-import { formatProdErrorMessage } from "@reduxjs/toolkit";
 
 export default function HeaderComponent() {
 	// State to manage the visibility of the mobile menu
@@ -16,10 +15,12 @@ export default function HeaderComponent() {
 
 	return (
 		<div className="header--container">
-			<section className="logo--container">
-				SA <br />
-				RA
-			</section>
+			<Link to="/">
+				<section className="logo--container">
+					SA <br />
+					RA
+				</section>
+			</Link>
 			<section className="nav--container">
 				<div className="hamburger-menu-icon" onClick={handleToggleMobileMenu}>
 					☰
@@ -30,13 +31,13 @@ export default function HeaderComponent() {
 						<Link to="/">Home</Link>
 					</li>
 					<li className="list-item">
-						<Link to="/about">Om mig</Link>
+						<Link to="/about">About</Link>
 					</li>
 					<li className="list-item">
-						<Link to="/portfolio">Projekt</Link>
+						<Link to="/portfolio">Project</Link>
 					</li>
 					<li className="list-item">
-						<Link to="/contact">Kontakt</Link>
+						<Link to="/contact">Contact</Link>
 					</li>
 				</ul>
 			</section>

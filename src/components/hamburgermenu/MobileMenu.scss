@@ -1,4 +1,4 @@
-@import "../../App.scss";
+@use "../../App" as *;
 
 .mobile-menu--container {
 	padding: 20px;
@@ -25,10 +25,6 @@
 	color: var(--a--color);
 	font-size: 18px;
 	font-weight: bold;
-}
-
-a.dark-theme {
-	color: var(--dark-mode-a-color);
 }
 
 // Hover effect for the links

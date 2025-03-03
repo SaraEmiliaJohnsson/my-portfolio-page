@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { motion } from "framer-motion";
 import "./ButtonStyling.scss";
 
 const PersonalityButton = () => {
@@ -8,7 +9,7 @@ const PersonalityButton = () => {
 		"Omtänksam",
 		"Noggrann",
 		"Stresstålig",
-		"Bra på att sammarbeta",
+		"Bra på att samarbeta",
 		"God arbetsmoral",
 		"Problemlösare",
 	];
@@ -16,11 +17,8 @@ const PersonalityButton = () => {
 	const [currentTrait, setCurrentTrait] = useState("");
 
 	const handleButtonClick = () => {
-		// Randomly select a trait from the array
 		const randomIndex = Math.floor(Math.random() * personalityTraits.length);
-		const randomTrait = personalityTraits[randomIndex];
-
-		setCurrentTrait(randomTrait);
+		setCurrentTrait(personalityTraits[randomIndex]);
 	};
 
 	return (
@@ -28,7 +26,17 @@ const PersonalityButton = () => {
 			<button className="styling-btn" onClick={handleButtonClick}>
 				Klicka fram mina egenskaper
 			</button>
-			<p className="personality--text">{currentTrait}</p>
+
+			{/* Gör att texten fadear in */}
+			<motion.p
+				className="personality--text"
+				initial={{ opacity: 0, y: -10 }}
+				animate={{ opacity: 1, y: 0 }}
+				transition={{ duration: 0.5 }}
+				key={currentTrait}
+			>
+				{currentTrait}
+			</motion.p>
 		</div>
 	);
 };
