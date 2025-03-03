@@ -33,9 +33,6 @@ export default function GitHubApi() {
 				// Parse the response as JSON
 				const projects = await response.json();
 
-
-
-
 				// Set the state with the processed data
 				setData(projects);
 				console.log(projectsWithImages);
@@ -64,9 +61,6 @@ export default function GitHubApi() {
 							>
 								<h3>{repo.name}</h3>
 							</a>
-
-
-
 						</article>
 					))}
 				</section>
